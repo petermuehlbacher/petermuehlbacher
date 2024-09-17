@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you:
+# If you need help with YAML syntax, here are some quick references for you: 
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,21 +18,25 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Peter Mühlbacher
+email: peter@muehlbacher.me
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Personal website of Peter Mühlbacher (mathematician); topics: mathematics, forecasting, physics, languages.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://peter.muehlbacher.me" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: chidethetrain
+github_username:  petermuehlbacher
+linkedin_username: peter-muehlbacher
+google_analytics: UA-73579939-1
+
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -53,3 +57,62 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# each collection is a root folder, named '_{{NAME}}', e.g. '_mathematics'
+# output: true tells Jekyll to compile it as a page
+# permalink tells it where to put these files
+collections:
+  papers:
+  maths:
+    output: true
+    permalink: /mathematics/:name/
+  forecasting:
+    output: true
+    permalink: /forecasting/:name/
+  languages:
+    output: true
+    permalink: /language/:name/
+  programming:
+    output: true
+    permalink: /programming/:name/
+  pages:
+    output: true
+    permalink: /:name/
+
+
+# we want each category's {{content}} to be inserted into the "_layouts/page.html" layout
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "maths"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "programming"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "languages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "forecasting"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  # - scope:
+  #     path: ""
+  #   values:
+  #     layout: "default"

@@ -1,0 +1,11 @@
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <h1>
+      <a class="site-title {%- unless page.bigheader -%}small{%- endunless -%}" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      <!--<a class="site-title" rel="author" href="{{ "/" | relative_url }}">Peter<br>Mühlbacher</a>-->
+    </h1>
+    {%- if page.bigheader -%}
+    {%- include nav.html -%}
+    {%- endif -%}
+  </div>
+</header>
