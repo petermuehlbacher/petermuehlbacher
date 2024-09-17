@@ -8,7 +8,7 @@ bigheader: true
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-I am a research scientist with interest in <em>probability theory</em>, its applications in <em>statistical mechanics</em> and <em>forecasting</em>, as well as <em>languages</em> and <em>programming</em>.
+I am a research scientist with interest in <em>probability theory</em>, its applications in <em>statistical mechanics</em> and <em>forecasting</em>, as well as <em>languages</em> and <em>programming</em>. My papers can be found [here](/research).
 
 
 For further details, see my [CV](CV.pdf) or [contact me via email](mailto:peter@muehlbacher.me).
