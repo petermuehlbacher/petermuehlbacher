@@ -8,10 +8,10 @@ bigheader: true
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-I am a final year PhD student in the [Warwick Mathematics Institute](https://warwick.ac.uk/fac/sci/maths/). My interests include <em>probability theory</em> in general, its applications in <em>statistical mechanics</em> (physics), <em>statistics</em>, <em>finance</em>, and <em>forecasting</em>, as well as <em>languages</em> and <em>programming</em>—or several topics at once: [Monte-Carlo simulations and their analysis](/research) or market designs to improve forecasting.
+I am a research scientist with interest in <em>probability theory</em>, its applications in <em>statistical mechanics</em> and <em>forecasting</em>, as well as <em>languages</em> and <em>programming</em>.
 
 
-For further details, see my [CV](http://peter.muehlbacher.me/CV.pdf) or [contact me via email](mailto:peter@muehlbacher.me).
+For further details, see my [CV](CV.pdf) or [contact me via email](mailto:peter@muehlbacher.me).
 
 <div>
     {%- include social.html -%}
@@ -40,12 +40,12 @@ For further details, see my [CV](http://peter.muehlbacher.me/CV.pdf) or [contact
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}-->
 
-{% assign categories = "maths|languages|programming|forecasting" | split: "|" %}
+<!-- {% assign categories = "maths|languages|programming|forecasting" | split: "|" %}
 {%- for category in categories -%}
     {%- if site.category.size > 0 -%}
         lol
     {%- endif -%}
-{%- endfor -%}
+{%- endfor -%} -->
 
 <div class="level0">
  <!--MATHS-->
